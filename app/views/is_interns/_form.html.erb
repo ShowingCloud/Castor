@@ -1,0 +1,21 @@
+<%= form_for(@is_intern) do |f| %>
+  <% if @is_intern.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@is_intern.errors.count, "error") %> prohibited this is_intern from being saved:</h2>
+
+      <ul>
+      <% @is_intern.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :is_intern %><br>
+    <%= f.check_box :is_intern %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

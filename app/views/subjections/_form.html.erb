@@ -1,0 +1,21 @@
+<%= form_for(@subjection) do |f| %>
+  <% if @subjection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subjection.errors.count, "error") %> prohibited this subjection from being saved:</h2>
+
+      <ul>
+      <% @subjection.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subjection %><br>
+    <%= f.text_field :subjection %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

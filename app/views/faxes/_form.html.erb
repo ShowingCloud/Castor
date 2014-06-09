@@ -1,0 +1,21 @@
+<%= form_for(@fax) do |f| %>
+  <% if @fax.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fax.errors.count, "error") %> prohibited this fax from being saved:</h2>
+
+      <ul>
+      <% @fax.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fax %><br>
+    <%= f.text_field :fax %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
