@@ -1,4 +1,4 @@
 Castor
 ======
 
-Website 20130603-01
+CRM System based on Ruby on Rails
